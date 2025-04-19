@@ -1,0 +1,34 @@
+class Solution {
+    static Scanner sc=new Scanner(System.in);
+    int arr1[]={5,8};
+    public int[] twoSum(int nums[],int target) 
+    {
+        for(int a=0;a<nums.length-1;a++)
+        {
+            for(int b=a+1;b<nums.length;b++)
+            {
+                if(nums[a] + nums[b] == target)
+                {
+                   int arr[]={a,b};
+                   return arr;
+                }
+            }
+        }
+       return arr1;
+    }
+}
+class Main{
+    public static void main(String [] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        Solution a=new Solution();
+            int nums[]=new int[sc.nextInt()];
+            for(int i=0;i<nums.length;i++)
+                {
+                    nums[i]=sc.nextInt();
+                }
+         int target=sc.nextInt();
+        int arr[]=a.twoSum(nums,target);
+        System.out.println(Arrays.toString(arr));
+    }
+}
